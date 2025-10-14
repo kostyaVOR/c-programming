@@ -2,14 +2,15 @@
 #include <stdlib.h>
 
 int main(int argc, char *argv[]) {
-    int a[10];
-    for (int i = 0; i <= 9; ++i) {
-        a[i] = atoi(argv[i+1]);
+    float a[10];
+    for (int i = 0; i < 10; ++i) {
+        a[i] = atof(argv[i+1]);
     }
-    float sr_arif = 0;
+    float sum = 0.0;
     
-    for (int i = 0; i<=9; ++i) {
-        sr_arif += a[i];
+    for (int i = 0; i < 10; ++i) {
+        sum += a[i];
     }
-    printf("%.2f\n", sr_arif/10);
+    float sr_arif = sum / 10.0;
+    printf("%.2f\n", sr_arif);
 }
