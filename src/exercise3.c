@@ -9,12 +9,12 @@ int main(int argc, char *argv[]) {
     }
     if (k > 0) {
         for (int i = 0; i <= 9; ++i) {
-            printf("%d " , a[(i - k + 10) % 10]);
+            printf("%f " , a[(i - k + 10) % 10]);
         }
     }
     else if (k < 0) {
         for (int i = 0; i <= 9; ++i) {
-            printf("%d ", a[(i - k) % 10]);
+            printf("%f ", a[(i - k) % 10]);
         }
     }
 }
