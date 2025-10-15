@@ -14,7 +14,7 @@ int main(int argc, char *argv[]) {
 
     for (int i = 0; i < 3; ++i) {
         for (int j = 0; j < 10; ++j) {
-            B[i][j] = atof(argv[30 + i * 10 + j + 1]]);
+            B[i][j] = atof(argv[30 + i * 10 + j + 1]);
         }
     }
 
