@@ -1,15 +1,14 @@
 #include <stdio.h>
+#include <math.h>
 
-int main(int argc, char *argv[]) {
-    float a[10];
+int main() {
+    double a[10];
+    double sum = 0;
     for (int i = 0; i < 10; ++i) {
-        scanf("%f", &a[i]);
+        scanf("%lf", &a[i]);
+        sum += round(a[i] * 100.0);
     }
-    float sum = 0.0;
-    
-    for (int i = 0; i < 10; ++i) {
-        sum += a[i];
-    }
-    float sr_arif = sum / 10.0;
+    double sr_arif = sum / 1000.0;
     printf("%.2f\n", sr_arif);
+    return 0;
 }
