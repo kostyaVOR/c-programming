@@ -2,19 +2,19 @@
 #include <stdlib.h>
 
 int main(int argc, char *argv[]) {
-    int A[10][3];
-    int B[3][10];
-    int C[10][10] = {0};
+    double A[10][3];
+    double B[3][10];
+    double C[10][10] = {0};
 
     for (int i = 0; i < 10; ++i) {
         for (int j = 0; j < 3; ++j) {
-            A[i][j] = atoi(argv[1]);
+            A[i][j] = atof(argv[i * 3 + j + 1]);
         }
     }
 
     for (int i = 0; i < 3; ++i) {
         for (int j = 0; j < 10; ++j) {
-            B[i][j] = atoi(argv[2]);
+            B[i][j] = atof(argv[30 + i * 10 + j + 1]]);
         }
     }
 
@@ -28,7 +28,7 @@ int main(int argc, char *argv[]) {
 
     for (int i = 0; i < 10; ++i) {
         for (int j = 0; j < 10; ++j) {
-            printf("%d ", C[i][j]);
+            printf("%g ", C[i][j]);
         }
     }
     printf("\n");
