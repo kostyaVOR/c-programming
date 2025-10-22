@@ -2,18 +2,18 @@
 #include <stdlib.h>
 
 int main(int argc, char *argv[]) {
-    int a[10];
-    int x = atoi(argv[11]);
-    int per = atoi(argv[12]);
+    double a[10];
+    double x;
+    int per;
     for (int i = 0; i <= 9; ++i) {
-        a[i] = atoi(argv[i+1]);
+        scanf("%lf", &a[i]);
     }
-
+    scanf("%lf %d", &x, &per);
     for (int i = 9; i > per; --i) {
         a[i] = a[i-1];
     }
     a[per] = x;
     for (int i = 0; i <= 9; ++i) {
-        printf("%d ", a[i]);
+        printf("%lf ", a[i]);
     }
 }
