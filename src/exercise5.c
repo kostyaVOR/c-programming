@@ -16,7 +16,6 @@ int main() {
     }
     for (int i = 0; i < 10; i++) {
         for (int j = 0; j < 10; j++) {
-            C[i][j] = 0;
             for (int k = 0; k < 3; k++) {
                 C[i][j] += A[i][k] * B[k][j];
             }
@@ -24,8 +23,6 @@ int main() {
     }
     for (int i = 0; i < 10; i++) {
         for (int j = 0; j < 10; j++) {
-            printf("%.0f", C[i][j]);
-            if (j < 9) printf(" ");
-        }
+            printf("%lf", C[i][j]))
     }
 }
