@@ -1,35 +1,31 @@
 #include <stdio.h>
-#include <stdlib.h>
 
-int main(int argc, char *argv[]) {
+int main() {
     double A[10][3];
     double B[3][10];
     double C[10][10] = {0};
-
-    for (int i = 0; i < 10; ++i) {
-        for (int j = 0; j < 3; ++j) {
-            A[i][j] = atof(argv[i * 3 + j + 1]);
+    for (int i = 0; i < 10; i++) {
+        for (int j = 0; j < 3; j++) {
+            scanf("%lf", &A[i][j]);
         }
     }
-
-    for (int i = 0; i < 3; ++i) {
-        for (int j = 0; j < 10; ++j) {
-            B[i][j] = atof(argv[30 + i * 10 + j + 1]);
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 10; j++) {
+            scanf("%lf", &B[i][j]);
         }
     }
-
-    for (int i = 0; i < 10; ++i) {
-        for (int j = 0; j < 10; ++j) {
-            for (int k = 0; k < 3; ++k) {
+    for (int i = 0; i < 10; i++) {
+        for (int j = 0; j < 10; j++) {
+            C[i][j] = 0;
+            for (int k = 0; k < 3; k++) {
                 C[i][j] += A[i][k] * B[k][j];
             }
         }
     }
-
-    for (int i = 0; i < 10; ++i) {
-        for (int j = 0; j < 10; ++j) {
-            printf("%g ", C[i][j]);
+    for (int i = 0; i < 10; i++) {
+        for (int j = 0; j < 10; j++) {
+            printf("%.0f", C[i][j]);
+            if (j < 9) printf(" ");
         }
     }
-    printf("\n");
 }
