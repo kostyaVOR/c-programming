@@ -9,10 +9,10 @@ int main(int argc, char *argv[]) {
         scanf("%lf", &a[i]);
     }
     scanf("%lf %d", &x, &per);
+    a[per] = x;
     for (int i = 9; i > per; --i) {
         a[i] = a[i-1];
     }
-    a[per] = x;
     for (int i = 0; i <= 9; ++i) {
         printf("%lf ", a[i]);
     }
