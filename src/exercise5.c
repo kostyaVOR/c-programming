@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main() {
+int main(int argc, char* argv[]) {
     double a[10][3];
     double b[3][10];
     double c[10][10] = {0};
