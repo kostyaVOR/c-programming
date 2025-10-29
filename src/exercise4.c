@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main() {
+int main(int argc, char ** argv) {
     double a[10];
     double x;
     int per;
@@ -8,8 +8,8 @@ int main() {
     for (int i = 0; i < 10; i++) {
         scanf("%lf", &a[i]);
     }
-    scanf("%lf", &x);
-    scanf("%d", &per);
+    x = atof(argv[1]);
+    per = atoi(argv[2]);
     for (int i = 9; i > per; i--) {
         a[i] = a[i - 1];
     }
